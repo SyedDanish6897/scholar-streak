@@ -28,21 +28,21 @@ export const LoginForm = ({ onLogin, onSwitchToRegister }: LoginFormProps) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <Card className="glass-card border-primary/20 hover-glow">
-          <CardHeader className="text-center space-y-4">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg">
+        <Card className="glass-card border-primary/20 hover-glow animate-scale-in">
+          <CardHeader className="text-center space-y-4 animate-fade-in-up">
             <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-2xl animate-float">
               📚
             </div>
             <div>
-              <CardTitle className="text-2xl gradient-text">Welcome Back</CardTitle>
-              <CardDescription className="text-muted-foreground">
+              <CardTitle className="text-2xl sm:text-3xl text-foreground drop-shadow-lg relative z-10">Welcome Back</CardTitle>
+              <CardDescription className="text-muted-foreground/80">
                 Sign in to continue your learning journey
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="animate-slide-up">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="username">Username</Label>
@@ -68,9 +68,9 @@ export const LoginForm = ({ onLogin, onSwitchToRegister }: LoginFormProps) => {
                   required
                 />
               </div>
-              <Button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-primary to-primary-light hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-primary to-primary-light hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 active:scale-[0.98]"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -86,7 +86,7 @@ export const LoginForm = ({ onLogin, onSwitchToRegister }: LoginFormProps) => {
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 Don't have an account?{' '}
-                <button 
+                <button
                   onClick={onSwitchToRegister}
                   className="text-primary hover:text-primary-light transition-colors duration-200 font-medium"
                 >

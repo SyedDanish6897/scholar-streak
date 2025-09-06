@@ -37,21 +37,21 @@ export const RegisterForm = ({ onRegister, onSwitchToLogin }: RegisterFormProps)
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <Card className="glass-card border-primary/20 hover-glow">
-          <CardHeader className="text-center space-y-4">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg">
+        <Card className="glass-card border-primary/20 hover-glow animate-scale-in">
+          <CardHeader className="text-center space-y-4 animate-fade-in-up">
             <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-success to-success-light flex items-center justify-center text-2xl animate-float">
               🚀
             </div>
             <div>
-              <CardTitle className="text-2xl gradient-text">Join Study Planner</CardTitle>
-              <CardDescription className="text-muted-foreground">
+              <CardTitle className="text-2xl sm:text-3xl text-foreground drop-shadow-lg relative z-10">Join Study Planner</CardTitle>
+              <CardDescription className="text-muted-foreground/80">
                 Create your account and start your learning adventure
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="animate-slide-up">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="username">Username</Label>
@@ -86,8 +86,8 @@ export const RegisterForm = ({ onRegister, onSwitchToLogin }: RegisterFormProps)
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className={`glass-card border-primary/30 focus:border-primary ${
-                    password && confirmPassword && password !== confirmPassword 
-                      ? 'border-destructive' 
+                    password && confirmPassword && password !== confirmPassword
+                      ? 'border-destructive'
                       : ''
                   }`}
                   required
@@ -96,9 +96,9 @@ export const RegisterForm = ({ onRegister, onSwitchToLogin }: RegisterFormProps)
                   <p className="text-sm text-destructive">Passwords do not match</p>
                 )}
               </div>
-              <Button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-success to-success-light hover:shadow-lg hover:shadow-success/30 transition-all duration-300"
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-success to-success-light hover:shadow-lg hover:shadow-success/30 transition-all duration-300 active:scale-[0.98]"
                 disabled={isLoading || (password && confirmPassword && password !== confirmPassword)}
               >
                 {isLoading ? (
@@ -114,7 +114,7 @@ export const RegisterForm = ({ onRegister, onSwitchToLogin }: RegisterFormProps)
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 Already have an account?{' '}
-                <button 
+                <button
                   onClick={onSwitchToLogin}
                   className="text-primary hover:text-primary-light transition-colors duration-200 font-medium"
                 >
