@@ -15,6 +15,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Study Planner Custom Variants
+        gradient: "bg-gradient-to-r from-primary to-primary-light text-primary-foreground hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300",
+        success: "bg-gradient-to-r from-success to-success-light text-success-foreground hover:shadow-lg hover:shadow-success/30 hover:-translate-y-0.5 transition-all duration-300",
+        xp: "bg-gradient-to-r from-accent to-accent-light text-accent-foreground hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 transition-all duration-300",
+        glass: "glass-card border-primary/30 text-foreground hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
