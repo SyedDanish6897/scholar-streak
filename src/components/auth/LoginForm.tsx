@@ -36,7 +36,7 @@ export const LoginForm = ({ onLogin, onSwitchToRegister }: LoginFormProps) => {
               📚
             </div>
             <div>
-              <CardTitle className="text-2xl sm:text-3xl gradient-text drop-shadow-lg">Welcome Back</CardTitle>
+              <CardTitle className="text-2xl sm:text-3xl gradient-text drop-shadow-lg relative z-10">Welcome Back</CardTitle>
               <CardDescription className="text-muted-foreground/80">
                 Sign in to continue your learning journey
               </CardDescription>
