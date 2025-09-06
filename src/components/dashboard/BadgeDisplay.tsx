@@ -12,8 +12,8 @@ export const BadgeDisplay = ({ badges }: BadgeDisplayProps) => {
     <div className="glass-card p-6 space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-lg font-semibold">Achievements</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className="text-lg font-semibold text-white">Achievements</h3>
+          <p className="text-sm text-white/70">
             {earnedBadges.length}/{totalBadges} badges earned
           </p>
         </div>
@@ -27,20 +27,20 @@ export const BadgeDisplay = ({ badges }: BadgeDisplayProps) => {
             className={`
               p-3 rounded-lg border transition-all duration-300
               ${badge.earned 
-                ? 'badge-earned glass-card border-success/30 hover-glow' 
+                ? 'bg-success/20 border-success/40 hover:bg-success/30' 
                 : 'bg-muted/50 border-muted opacity-50'
               }
             `}
           >
             <div className="text-center space-y-2">
-              <div className={`text-2xl ${badge.earned ? 'animate-bounce-in' : ''}`}>
+              <div className="text-2xl">
                 {badge.icon}
               </div>
               <div>
-                <div className={`font-semibold text-sm ${badge.earned ? 'text-success' : 'text-muted-foreground'}`}>
+                <div className={`font-semibold text-sm ${badge.earned ? 'text-success' : 'text-white/50'}`}>
                   {badge.name}
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className={`text-xs ${badge.earned ? 'text-white/70' : 'text-white/30'}`}>
                   {badge.description}
                 </div>
               </div>
@@ -51,7 +51,7 @@ export const BadgeDisplay = ({ badges }: BadgeDisplayProps) => {
       
       {earnedBadges.length === 0 && (
         <div className="text-center py-4">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white/70">
             Complete tasks to earn your first badges! 🌟
           </p>
         </div>

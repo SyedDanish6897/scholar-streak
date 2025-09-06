@@ -13,8 +13,8 @@ export const XPProgress = ({ user }: XPProgressProps) => {
     <div className="glass-card p-6 space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-lg font-semibold">Level {level}</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className="text-lg font-semibold text-white">Level {level}</h3>
+          <p className="text-sm text-white/70">
             {currentLevelXP}/100 XP to next level
           </p>
         </div>
@@ -28,9 +28,9 @@ export const XPProgress = ({ user }: XPProgressProps) => {
             style={{ width: `${progressPercentage}%` }}
           />
         </div>
-        <div className="flex justify-between text-sm text-muted-foreground">
+        <div className="flex justify-between text-sm text-white/70">
           <span>0 XP</span>
-          <span className="xp-gradient font-bold">{user.xp} XP Total</span>
+          <span className="text-accent font-bold">{user.xp} XP Total</span>
           <span>100 XP</span>
         </div>
       </div>

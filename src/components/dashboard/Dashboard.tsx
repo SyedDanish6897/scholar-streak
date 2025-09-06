@@ -45,10 +45,10 @@ export const Dashboard = ({
       <main className="container mx-auto px-4 py-6 space-y-6">
         {/* Welcome Section */}
         <div className="glass-card p-6 text-center">
-          <h2 className="text-2xl font-bold gradient-text mb-2">
+          <h2 className="text-2xl font-bold text-white mb-2">
             Welcome back, {user.username}! 👋
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/70">
             Ready to continue your learning journey? Let's make today productive!
           </p>
         </div>
@@ -61,22 +61,22 @@ export const Dashboard = ({
           {/* Quick Stats */}
           <div className="glass-card p-6 space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold">Progress</h3>
+              <h3 className="text-lg font-semibold text-white">Progress</h3>
               <TrendingUp className="text-success" />
             </div>
             
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-muted-foreground">Active Tasks</span>
+                <span className="text-sm text-white/70">Active Tasks</span>
                 <span className="font-semibold text-primary">{activeTasks.length}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-muted-foreground">Completed</span>
+                <span className="text-sm text-white/70">Completed</span>
                 <span className="font-semibold text-success">{completedTasks.length}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-muted-foreground">Total XP</span>
-                <span className="font-semibold xp-gradient">{user.xp}</span>
+                <span className="text-sm text-white/70">Total XP</span>
+                <span className="font-semibold text-accent">{user.xp}</span>
               </div>
             </div>
           </div>
@@ -89,8 +89,8 @@ export const Dashboard = ({
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5" />
-              <h2 className="text-xl font-semibold">Your Tasks</h2>
+              <Target className="w-5 h-5 text-white" />
+              <h2 className="text-xl font-semibold text-white">Your Tasks</h2>
             </div>
             
             <Button

@@ -37,12 +37,12 @@ export const TaskCard = ({ task, onComplete, onDelete }: TaskCardProps) => {
     >
       <div className="flex items-start justify-between">
         <div className="flex-1 space-y-2">
-          <h4 className={`font-medium ${task.completed ? 'line-through text-muted-foreground' : ''}`}>
+          <h4 className={`font-medium ${task.completed ? 'line-through text-white/60' : 'text-white'}`}>
             {task.title}
           </h4>
           
           {task.description && (
-            <p className="text-sm text-muted-foreground">
+            <p className={`text-sm ${task.completed ? 'text-white/50' : 'text-white/70'}`}>
               {task.description}
             </p>
           )}
