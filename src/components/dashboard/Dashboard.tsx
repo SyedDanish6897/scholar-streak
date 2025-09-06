@@ -65,6 +65,13 @@ export const Dashboard = ({
   // Minimal confetti pieces
   const confettiPieces = useMemo(() => Array.from({ length: 30 }, (_, i) => i + confettiBurst * 1000), [confettiBurst]);
 
+  useEffect(() => {
+    if (confettiBurst > 0) {
+      const t = setTimeout(() => setConfettiBurst(0), 2000);
+      return () => clearTimeout(t);
+    }
+  }, [confettiBurst]);
+
   // Music controls using WebAudio API
   const toggleMusic = async () => {
     if (!isMusicOn) {
