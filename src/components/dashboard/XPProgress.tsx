@@ -10,7 +10,7 @@ export const XPProgress = ({ user }: XPProgressProps) => {
   const progressPercentage = currentLevelXP;
 
   return (
-    <div className="glass-card p-6 space-y-4">
+    <div className="glass-card p-4 md:p-6 space-y-4 animate-slide-in-left hover-glow">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-white">Level {level}</h3>
@@ -18,7 +18,7 @@ export const XPProgress = ({ user }: XPProgressProps) => {
             {currentLevelXP}/100 XP to next level
           </p>
         </div>
-        <div className="text-3xl animate-glow">⭐</div>
+        <div className="text-3xl animate-glow animate-rotate-slow">⭐</div>
       </div>
       
       <div className="space-y-2">

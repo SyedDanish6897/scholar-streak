@@ -42,19 +42,19 @@ export const Dashboard = ({
     <div className="min-h-screen">
       <Header user={user} onLogout={onLogout} />
       
-      <main className="container mx-auto px-4 py-6 space-y-6">
+      <main className="container mx-auto px-4 py-6 space-y-6 animate-fade-in-up">
         {/* Welcome Section */}
-        <div className="glass-card p-6 text-center">
-          <h2 className="text-2xl font-bold text-white mb-2">
+        <div className="glass-card p-6 text-center animate-slide-in-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 animate-bounce-in">
             Welcome back, {user.username}! 👋
           </h2>
-          <p className="text-white/70">
+          <p className="text-white/70 text-sm md:text-base">
             Ready to continue your learning journey? Let's make today productive!
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           <XPProgress user={user} />
           <StreakCounter user={user} />
           
@@ -104,7 +104,7 @@ export const Dashboard = ({
 
           {/* Add Task Form */}
           {showAddTask && (
-            <div className="animate-slide-up">
+            <div className="animate-slide-up animate-scale-in">
               <AddTaskForm 
                 onAddTask={handleAddTask}
                 onCancel={() => setShowAddTask(false)}

@@ -30,9 +30,9 @@ export const TaskCard = ({ task, onComplete, onDelete }: TaskCardProps) => {
   return (
     <div 
       className={`
-        glass-card p-4 space-y-3 transition-all duration-500
+        glass-card p-3 md:p-4 space-y-3 transition-all duration-500 animate-fade-in-up
         ${task.completed ? 'task-complete opacity-60' : 'hover-glow'}
-        ${isCompleting ? 'animate-pulse scale-105' : ''}
+        ${isCompleting ? 'animate-pulse scale-105 animate-wobble' : ''}
       `}
     >
       <div className="flex items-start justify-between">

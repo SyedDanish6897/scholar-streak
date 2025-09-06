@@ -9,7 +9,7 @@ export const BadgeDisplay = ({ badges }: BadgeDisplayProps) => {
   const totalBadges = badges.length;
 
   return (
-    <div className="glass-card p-6 space-y-4">
+    <div className="glass-card p-4 md:p-6 space-y-4 animate-slide-in-right hover-glow">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-white">Achievements</h3>
@@ -20,7 +20,7 @@ export const BadgeDisplay = ({ badges }: BadgeDisplayProps) => {
         <div className="text-2xl animate-glow">🏆</div>
       </div>
       
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
         {badges.map((badge) => (
           <div
             key={badge.id}

@@ -6,7 +6,7 @@ interface StreakCounterProps {
 
 export const StreakCounter = ({ user }: StreakCounterProps) => {
   return (
-    <div className="glass-card p-6 space-y-4">
+    <div className="glass-card p-4 md:p-6 space-y-4 animate-slide-up hover-glow">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-white">Study Streak</h3>
@@ -14,7 +14,7 @@ export const StreakCounter = ({ user }: StreakCounterProps) => {
             {user.streak === 0 ? 'Start your streak today!' : 'Days in a row'}
           </p>
         </div>
-        <div className={`text-3xl ${user.streak > 0 ? 'streak-flame' : ''}`}>
+        <div className={`text-3xl ${user.streak > 0 ? 'animate-pulse-slow animate-wobble' : 'animate-pulse-slow'}`}>
           🔥
         </div>
       </div>

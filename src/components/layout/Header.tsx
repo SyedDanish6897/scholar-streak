@@ -9,8 +9,8 @@ interface HeaderProps {
 
 export const Header = ({ user, onLogout }: HeaderProps) => {
   return (
-    <header className="glass-card border-b border-primary/20 sticky top-0 z-50 backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-4">
+    <header className="glass-card border-b border-primary/20 sticky top-0 z-50 backdrop-blur-md animate-slide-up">
+      <div className="container mx-auto px-2 md:px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-xl animate-float">
@@ -22,10 +22,10 @@ export const Header = ({ user, onLogout }: HeaderProps) => {
             </div>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <div className="flex items-center gap-2 text-sm">
               <UserIcon className="w-4 h-4" />
-              <span className="font-medium">{user.username}</span>
+              <span className="font-medium hidden sm:inline">{user.username}</span>
             </div>
             
             <Button 
