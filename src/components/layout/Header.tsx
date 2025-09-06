@@ -18,7 +18,7 @@ export const Header = ({ user, onLogout }: HeaderProps) => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-white">Study Planner</h1>
-              <p className="text-sm text-primary-light">Gamified Learning</p>
+              <p className="text-sm text-primary-light"><strong>Gamify Your Study, Boost Your Skills! </strong> 🎮</p>
             </div>
           </div>
           
