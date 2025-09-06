@@ -40,7 +40,7 @@ export const Dashboard = ({
   const audioCtxRef = useRef<AudioContext | null>(null);
   const musicOscRef = useRef<OscillatorNode | null>(null);
   const musicGainRef = useRef<GainNode | null>(null);
-  const [timerSeconds, setTimerSeconds] = useState(300);
+  const [timerSeconds, setTimerSeconds] = useState(600);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const timerRef = useRef<number | null>(null);
   const shownDueIdsRef = useRef<Set<string>>(new Set());
@@ -219,9 +219,12 @@ export const Dashboard = ({
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 animate-bounce-in">
               Welcome back, {user.username}! 👋
             </h2>
-            <p className="text-white/70 text-sm md:text-base">
-              Ready to continue your learning journey? Let's make today productive!
-            </p>
+            <div className="text-white/70 text-sm md:text-base space-y-1">
+              <p>Ready to continue your learning journey? Let's make today productive!</p>
+              <p>Did you drink water today? 💧 </p>
+              <p>Your brain says: Let’s study! 🧠 </p>
+              <p>Oops… your tasks are plotting against you! 😱</p>
+            </div>
           </div>
 
           <Card className="glass-card overflow-hidden">
@@ -293,10 +296,10 @@ export const Dashboard = ({
               <CardDescription>Quick sessions for momentum.</CardDescription>
             </CardHeader>
             <CardContent className="pt-0 flex items-center gap-2">
-              <div className="font-mono text-xl min-w-[72px] text-center">{formatTime(timerSeconds)}</div>
-              <Button variant="success" size="sm" onClick={() => setIsTimerRunning(true)} disabled={isTimerRunning}>Start</Button>
+              <div className="font-mono text-xl min-w-[72px] text-center"><p>{formatTime(timerSeconds)}</p></div>
+              <Button variant="success" size="sm" className="rounded-[14px]" onClick={() => setIsTimerRunning(true)} disabled={isTimerRunning}>Start</Button>
               <Button variant="outline" size="sm" onClick={() => setIsTimerRunning(false)} disabled={!isTimerRunning}>Pause</Button>
-              <Button variant="outline" size="sm" onClick={() => resetTimer(300)}>Reset</Button>
+              <Button variant="outline" size="sm" onClick={() => resetTimer(600)}>Reset</Button>
             </CardContent>
           </Card>
 
