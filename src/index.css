@@ -395,14 +395,31 @@
 }
 
 @keyframes scaleIn {
-  0% { 
-    opacity: 0; 
-    transform: scale(0.8); 
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  100% { 
-    opacity: 1; 
-    transform: scale(1); 
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
+}
+
+/* Confetti and Fireworks */
+@keyframes confettiFall {
+  0% { transform: translateY(-20vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes fireworkBurst {
+  0% { transform: scale(0); opacity: 1; }
+  80% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+@layer utilities {
+  .animate-confetti { animation: confettiFall 1.8s ease-in forwards; }
+  .animate-firework { animation: fireworkBurst 1.2s ease-out forwards; }
 }
 
 /* Responsive Design Enhancements */
@@ -410,7 +427,7 @@
   .glass-card {
     @apply p-4;
   }
-  
+
   .container {
     @apply px-2;
   }
