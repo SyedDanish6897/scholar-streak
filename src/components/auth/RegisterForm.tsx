@@ -45,7 +45,7 @@ export const RegisterForm = ({ onRegister, onSwitchToLogin }: RegisterFormProps)
               🚀
             </div>
             <div>
-              <CardTitle className="text-2xl sm:text-3xl gradient-text drop-shadow-lg relative z-10">Join Study Planner</CardTitle>
+              <CardTitle className="text-2xl sm:text-3xl text-foreground drop-shadow-lg relative z-10">Join Study Planner</CardTitle>
               <CardDescription className="text-muted-foreground/80">
                 Create your account and start your learning adventure
               </CardDescription>
